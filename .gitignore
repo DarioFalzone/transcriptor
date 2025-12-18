@@ -1,0 +1,9 @@
+models/*.bin
+models/*.ggml
+*.wav
+/tmp/
+whisper.cpp/main
+whisper.cpp/*.o
+whisper.cpp/build/
+transcripcion*.txt
+.processed_files

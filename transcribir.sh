@@ -7,6 +7,7 @@ OUT="${3:-transcripcion}"
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$DIR/whisper.cpp"
+export LD_LIBRARY_PATH="$PWD/build/lib:$LD_LIBRARY_PATH"
 
 echo "[*] Convirtiendo audio a WAV 16kHz mono..."
 ffmpeg -y -i "$IN" -ar 16000 -ac 1 /tmp/_whisper_in.wav >/dev/null 2>&1
